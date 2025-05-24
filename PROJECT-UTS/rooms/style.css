@@ -1,0 +1,130 @@
+/* style.css */
+
+body {
+    margin: 0;
+    padding-top: 98px; /* menyesuaikan tinggi header */
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #d8d8d8;
+    color: #313131;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 98%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.header nav a {
+    color: rgb(122, 176, 248);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header nav a:hover {
+    color: #ffcc00;
+}
+
+.room-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.room-card {
+  width: 300px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.room-card img {
+  width: 100%;
+  height: auto;
+}
+
+.room-card h3 {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.room-card p {
+  margin: 5px 0;
+}
+
+.room-card a {
+  text-decoration: none;
+}
+
+.room-card .btn {
+  display: inline-block;
+  background-color: #003366;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.room-card .btn:hover {
+  background-color: #002244;
+}
+
+.check-form {
+  max-width: 400px;
+  margin: 100px auto 40px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.check-form h2 {
+  color: #003366;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.check-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.check-form input,
+.check-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #002244;
+}

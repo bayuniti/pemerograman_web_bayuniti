@@ -1,0 +1,254 @@
+/* style.css */
+
+body {
+    margin: 10;
+    padding-top: 98px; /* menyesuaikan tinggi header */
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #d8d8d8;
+    color: #313131;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.header nav a {
+    color: rgb(122, 176, 248);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header nav a:hover {
+    color: #ffcc00;
+}
+
+/* Gaya Dasar Halaman */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 85px;
+    background-color: #f0f2f5; /* Latar belakang abu-abu muda */
+}
+
+/* Container Utama untuk Semua Kartu Restoran */
+.container {
+    max-width: 1000px; /* Lebar maksimal konten */
+    margin: 0 auto; /* Pusatkan container di halaman */
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    flex-direction: column; /* Mengatur item (kartu restoran) dalam satu kolom */
+    gap: 40px; /* Jarak vertikal antar setiap kartu restoran */
+}
+
+/* Gaya Dasar untuk Setiap Kartu Restoran */
+.restaurant-card {
+    display: flex; /* Menggunakan Flexbox untuk gambar dan detail */
+    background-color: #fff; /* Latar belakang putih untuk kartu */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+    border-radius: 8px; /* Sudut membulat */
+    overflow: hidden; /* Memastikan konten tidak keluar dari border-radius */
+    flex-wrap: wrap; /* Memungkinkan gambar dan detail untuk wrap di layar kecil */
+}
+
+/* Gaya untuk Kartu Restoran dengan Urutan Terbalik (Gambar di Kanan) */
+.restaurant-card.reverse {
+    flex-direction: row-reverse; /* Membalik urutan flex item: detail di kiri, gambar di kanan */
+}
+
+/* Kontainer Gambar Restoran */
+.restaurant-image-container {
+    flex: 1; /* Memberi proporsi ruang yang sama */
+    min-width: 300px; /* Lebar minimum untuk gambar sebelum wrapping */
+    position: relative; /* Diperlukan untuk penempatan panah navigasi */
+}
+
+.restaurant-image-container img {
+    width: 100%; /* Gambar mengisi penuh lebar kontainer */
+    height: 100%; /* Gambar mengisi penuh tinggi kontainer */
+    object-fit: cover; /* Menyesuaikan gambar agar menutupi area tanpa terdistorsi */
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+}
+
+/* Panah Navigasi Gambar (Previous/Next) */
+.image-nav-arrows {
+    position: absolute; /* Posisikan relatif terhadap .restaurant-image-container */
+    top: 50%; /* Posisikan di tengah vertikal */
+    transform: translateY(-50%); /* Koreksi posisi agar benar-benar di tengah */
+    width: 100%; /* Lebar penuh */
+    display: flex; /* Menggunakan Flexbox untuk menempatkan panah */
+    justify-content: space-between; /* Menempatkan panah di ujung kiri dan kanan */
+    padding: 0 10px; /* Padding horizontal */
+    box-sizing: border-box; /* Padding termasuk dalam lebar total */
+}
+
+.arrow {
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+    color: white; /* Warna panah putih */
+    border: none; /* Tanpa border */
+    padding: 10px; /* Padding di dalam tombol */
+    cursor: pointer; /* Mengubah kursor menjadi pointer saat di-hover */
+    border-radius: 50%; /* Membuat tombol bulat */
+    font-size: 18px; /* Ukuran font panah */
+    line-height: 1; /* Menyesuaikan tinggi baris */
+    display: flex; /* Untuk menengahkan simbol panah */
+    align-items: center; /* Tengah vertikal */
+    justify-content: center; /* Tengah horizontal */
+    width: 30px; /* Lebar tombol */
+    height: 30px; /* Tinggi tombol */
+}
+
+/* Area Detail Restoran (Teks & Tombol) */
+.restaurant-details {
+    flex: 1; /* Memberi proporsi ruang yang sama */
+    padding: 30px; /* Padding di dalam area detail */
+    min-width: 350px; /* Lebar minimum detail sebelum wrapping */
+    display: flex; /* Menggunakan Flexbox */
+    flex-direction: column; /* Mengatur konten secara vertikal */
+    justify-content: center; /* Tengah secara vertikal */
+}
+
+/* Gaya untuk Area Detail Restoran dengan Latar Belakang Gelap */
+.restaurant-details.dark-bg {
+    background-color: #333; /* Latar belakang abu-abu gelap */
+    color: #fff; /* Warna teks putih */
+}
+
+/* Gaya Judul (H2) */
+.restaurant-details h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #333; /* Warna default untuk teks judul */
+}
+
+.restaurant-details.dark-bg h2 {
+    color: #fff; /* Warna judul putih jika latar belakang gelap */
+}
+
+/* Gaya Sub-Judul (H3) */
+.restaurant-details h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #555; /* Warna default untuk teks sub-judul */
+}
+
+.restaurant-details.dark-bg h3 {
+    color: #ccc; /* Warna sub-judul abu-abu muda jika latar belakang gelap */
+}
+
+/* Gaya Paragraf */
+.restaurant-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #666; /* Warna default untuk teks paragraf */
+}
+
+.restaurant-details.dark-bg p {
+    color: #bbb; /* Warna paragraf abu-abu terang jika latar belakang gelap */
+}
+
+/* Gaya Informasi Waktu (Dining/Lunch/Dinner) */
+.timing {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666; /* Warna default untuk teks waktu */
+}
+
+.restaurant-details.dark-bg .timing {
+    color: #bbb; /* Warna teks waktu abu-abu terang jika latar belakang gelap */
+}
+
+/* Grup Tombol */
+.button-group {
+    display: flex; /* Menggunakan Flexbox untuk menempatkan tombol berdampingan */
+    gap: 10px; /* Jarak antar tombol */
+    margin-top: 20px;
+}
+
+/* Gaya Dasar Tombol */
+.button {
+    display: inline-block; /* Agar bisa diatur padding dan margin */
+    padding: 12px 25px;
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    border-radius: 5px; /* Sudut tombol membulat */
+    font-weight: bold; /* Teks tombol tebal */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transisi halus saat hover */
+}
+
+/* Gaya Tombol "Read More" */
+.button.read-more {
+    background-color: transparent; /* Latar belakang transparan */
+    color: #007bff; /* Warna teks biru */
+    border: 1px solid #007bff; /* Border biru */
+}
+
+.restaurant-details.dark-bg .button.read-more {
+    color: #fff; /* Warna teks putih jika latar belakang gelap */
+    border-color: #fff; /* Border putih jika latar belakang gelap */
+}
+
+.button.read-more:hover {
+    background-color: #e6f2ff; /* Efek hover: latar belakang biru sangat muda */
+}
+
+.restaurant-details.dark-bg .button.read-more:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efek hover: latar belakang semi-transparan putih */
+}
+
+/* Gaya Tombol "Book A Table" */
+.button.book-table {
+    background-color: #007bff; /* Latar belakang biru solid */
+    color: white; /* Warna teks putih */
+    border: 1px solid #007bff; /* Border biru solid */
+}
+
+.restaurant-details.dark-bg .button.book-table {
+    background-color: #0056b3; /* Latar belakang biru lebih gelap jika latar belakang gelap */
+    border-color: #0056b3; /* Border biru lebih gelap jika latar belakang gelap */
+}
+
+.button.book-table:hover {
+    background-color: #0056b3; /* Efek hover: latar belakang biru lebih gelap */
+}
+
+
+/* Media Queries untuk Responsivitas (Layar Kecil/Mobile) */
+@media (max-width: 768px) {
+    .restaurant-card, .restaurant-card.reverse {
+        flex-direction: column; /* Mengubah tata letak menjadi tumpukan vertikal */
+    }
+
+    .restaurant-image-container, .restaurant-details {
+        min-width: unset; /* Menghapus lebar minimum, agar dapat menyesuaikan lebar penuh */
+        width: 100%; /* Membuat gambar dan detail mengambil lebar penuh */
+    }
+
+    .restaurant-details {
+        padding: 20px; /* Mengurangi padding untuk layar kecil */
+    }
+
+    .button-group {
+        flex-direction: column; /* Mengubah tombol menjadi tumpukan vertikal */
+    }
+
+    .button {
+        width: 100%; /* Membuat tombol mengambil lebar penuh */
+        text-align: center; /* Memusatkan teks tombol */
+    }
+}

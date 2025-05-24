@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Profile - Hotel Royal Singapore</title>
+  <link rel="stylesheet" href="style_profile.css" />
+</head>
+<body>
+  <header class="header">
+    <nav>
+     <a href="../webhotel.html">Kembali</a>
+     <a href="location.html">Location</a>
+      <a href="/webhotel/contact.html">kontak</a>
+      <a href="../about.html">Tentang</a>
+    </nav>
+  </header>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+    .profile-container {
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      padding: 2rem;
+      max-width: 450px;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+      margin: 0 auto 1.5rem;
+      border: 4px solid #1e90ff;
+    }
+    h1 {
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #1e90ff;
+    }
+    .role {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+    .info-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem;
+      text-align: left;
+    }
+    .info-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #ddd;
+      font-size: 1rem;
+    }
+    .info-list li span {
+      font-weight: 600;
+      color: #555;
+    }
+    .btn {
+      background-color: #1e90ff;
+      border: none;
+      color: white;
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    /* Responsive */
+    @media (max-width: 500px) {
+      .profile-container {
+        margin: 1rem;
+        max-width: 100%;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-container" role="main" aria-label="Profil Pengguna">
+    <img src="cover.jpg" alt="Avatar Pengguna" class="avatar" />
+    <h1>Bayu Niti Kurniawan</h1>
+    <div class="role"> Royal Hotel</div>
+    <ul class="info-list">
+      <li><span>Email:</span> Bayuniti111@gmail.com</li>
+      <li><span>Nomor Telepon:</span> +62 822 8800 9911</li>
+      <li><span>Alamat:</span> 36 Newton Rd, Singapura 307964</li>
+      <li><span>Status Akun:</span> Aktif</li>
+    </ul>
+    <button class="btn" id="editProfileBtn">Ini hanyalah sebuah contoh tugas</button>
+  </div>
+</body>
+</html>
